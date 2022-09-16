@@ -36,6 +36,10 @@ def extract_answer_from_response(response):
 
     This function returns the answer value from the nested dictionary.
     """
+    if response[0] == 'magic':
+        if response[0][0] == 'question' and response[0][1] == 'answer' and response[0][2] == 'type':        
+    else: 
+        return None
 
     # TODO what would happen if the response dictionary was not in the expected form?
     # TODO can you modify this function to print an error message, and return None
